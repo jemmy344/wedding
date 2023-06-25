@@ -2,6 +2,7 @@ import CircularText from "../components/CircularText";
 
 
 
+
 function LandingPage() {
     return (
         <div>
