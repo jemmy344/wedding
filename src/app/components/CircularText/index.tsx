@@ -4,10 +4,10 @@ import ReactCurvedText from 'react-curved-text';
 
 const CircularText = () => {
   return (
-    <div className="relative w-200 h-200  flex justify-center items-center">
+    <div className="relative  w-full flex justify-center items-center">
       <ReactCurvedText
-        width={300}
-        height={300}
+        width={500}
+        height={500}
         cx={150}
         cy={150}
         rx={100}
@@ -16,8 +16,8 @@ const CircularText = () => {
         reversed={false}
         text="Praise Jesus ~ We did it ~ We're getting married ~ "
         textProps={{
-          style: { fontSize: 28 },
-          className: 'text-white',
+          style: { fontSize: 26 },
+          className: 'text-white text-justify',
         }}
         textPathProps={null}
         tspanProps={null}
