@@ -1,6 +1,7 @@
+"use client"
 import { headerNavLinks } from "@/data/headerNavLinks";
 import { siteMetadata } from "@/data/siteMetadata";
-
+import { Bars } from 'react-loader-spinner';
 
 
 
@@ -34,13 +35,20 @@ const Header = () => {
                             <li><a href={navItem.href}>{navItem.title}</a></li>
                         ))
                     }
-
-
-
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="">
+                    <Bars
+                        height="30"
+                        width="90"
+                        color="#4fa94d"
+                        ariaLabel="bars-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                    />
+                </a>
             </div>
         </div>
     );
