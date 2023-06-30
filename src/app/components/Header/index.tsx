@@ -1,5 +1,5 @@
 "use client"
-import { headerNavLinks } from "@/data/headerNavLinks";
+import { HeaderNavLinks, headerNavLinks } from "@/data/headerNavLinks";
 import { siteMetadata } from "@/data/siteMetadata";
 import { Bars } from 'react-loader-spinner';
 
@@ -20,8 +20,8 @@ const Header = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] 
                     p-2 shadow bg-base-100 rounded-box w-52">
                         {
-                            headerNavLinks.map((navItem) => (
-                                <li><a href={navItem.href}>{navItem.title}</a></li>
+                            headerNavLinks.map((navItem:HeaderNavLinks) => (
+                                <li key={navItem.title}><a href={navItem.href}>{navItem.title}</a></li>
                             ))
                         }
                     </ul>
@@ -31,8 +31,8 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {
-                        headerNavLinks.map((navItem) => (
-                            <li><a href={navItem.href}>{navItem.title}</a></li>
+                        headerNavLinks.map((navItem:HeaderNavLinks) => (
+                            <li key={navItem.title}><a href={navItem.href}>{navItem.title}</a></li>
                         ))
                     }
                 </ul>

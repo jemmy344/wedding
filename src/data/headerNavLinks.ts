@@ -5,7 +5,7 @@ export const headerNavLinks: HeaderNavLinks[] = [
   // { href: '/about', title: 'About' },
 ];
 
-interface HeaderNavLinks {
+export interface HeaderNavLinks {
   href: string;
   title: string;
 }
