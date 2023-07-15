@@ -38,7 +38,7 @@ const Header = () => {
                 }
 
             </div>
-       
+
             <div className="navbar-end">
                 <a className="">
                     <Bars
@@ -56,7 +56,13 @@ const Header = () => {
     );
 }
 
+const Name = () => {
+    return (
+        <>
 
+        </>
+    );
+}
 
 const TopSection = () => {
     return (
@@ -65,7 +71,7 @@ const TopSection = () => {
             <div className="absolute inset-0 bg-topImage bg-cover">
 
                 <div className="h-screen w-full relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-40"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-[71%]"></div>
 
                 </div>
             </div>

@@ -1,9 +1,81 @@
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
+import type { Container, Engine } from "tsparticles-engine";
 
 const ParticlesComponent = () => {
+    const particleOptions: any = {
+        background: {
+            color: {
+                value: 'transparent' // Set the background color to transparent
+            }
+        },
+        fpsLimit: 60,
+        particles: {
+            number: {
+                value: 7, // Adjust the number of particles
+                density: {
+                    enable: true,
+                    value_area: 300 // Increase or decrease the area to cover
+                }
+            },
+            color: {
+                value: '#FFD700' // Yellowish color for the particles
+            },
+            shape: {
+                type: 'circle' // Shape of the particles (circle)
+            },
+            opacity: {
+                value: 0.8, // Opacity of the particles
+                random: true,
+                anim: {
+                    enable: true,
+                    speed: 2,
+                    opacity_min: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: 8, // Size of the particles
+                random: true,
+                anim: {
+                    enable: false
+                }
+            },
+            move: {
+                enable: true,
+                speed: 1.5, // Speed of particle movement
+                direction: 'top',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            },
+            line_linked: {
+                enable: false // Disable particle connections
+            },
+            events: {
+                onclick: {
+                    enable: false // Disable particle click event
+                }
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: {
+                    enable: false // Disable particle hover effect
+                },
+                resize: true
+            }
+        }
+    };
+
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
 
@@ -17,83 +89,17 @@ const ParticlesComponent = () => {
         await console.log(container);
     }, []);
     return (
-        <Particles
-            id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
-            options={{
-                background: {
-                    color: {
-                        value: "#0d47a1",
-                    },
-                },
-                fpsLimit: 120,
-                interactivity: {
-                    events: {
-                        onClick: {
-                            enable: true,
-                            mode: "push",
-                        },
-                        onHover: {
-                            enable: true,
-                            mode: "repulse",
-                        },
-                        resize: true,
-                    },
-                    modes: {
-                        push: {
-                            quantity: 4,
-                        },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
-                        },
-                    },
-                },
-                particles: {
-                    color: {
-                        value: "#ffffff",
-                    },
-                    links: {
-                        color: "#ffffff",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    collisions: {
-                        enable: true,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 6,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 800,
-                        },
-                        value: 80,
-                    },
-                    opacity: {
-                        value: 0.5,
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        value: { min: 1, max: 5 },
-                    },
-                },
-                detectRetina: true,
-            }}
-        />
+        <div className="z-[100]" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                width="100%"
+                height="100%"
+                className="h-screen w-full"
+                loaded={particlesLoaded}
+                options={particleOptions}
+            />
+        </div>
     );
 };
 export default ParticlesComponent;
