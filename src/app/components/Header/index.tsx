@@ -56,11 +56,11 @@ const Header = () => {
     );
 }
 
-const Name = () => {
+const Name = ({ coupleName }: { coupleName: string }) => {
     return (
-        <>
-
-        </>
+        <div className="top-[50%] left-[25%] font-primary text-5xl  absolute z-[120]">
+            <h1>{coupleName}</h1>
+        </div>
     );
 }
 
@@ -69,9 +69,11 @@ const TopSection = () => {
         <>
             <Header />
             <div className="absolute inset-0 bg-topImage bg-cover">
-
+                <Name coupleName={`${siteMetadata.couplesDetails.hisName} & ${siteMetadata.couplesDetails.herName}`} />
                 <div className="h-screen w-full relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-[71%]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-[71%]">
+
+                    </div>
 
                 </div>
             </div>
