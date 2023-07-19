@@ -1,3 +1,5 @@
+import { siteMetadata } from "@/data/siteMetadata";
+
 // Function to pick the first words
 export function pickFirstWords(hisName: string, herName: string) {
   const hisFirstWord = hisName.split(" ")[0];
@@ -24,3 +26,8 @@ export const getInitials = (hisName: string, herName: string) => {
 export const classNames = (...classes: any) => {
   return classes.filter(Boolean).join(" ");
 };
+export const getFirstNames = () => {
+  const hisFirstName = siteMetadata.couplesDetails.hisName.split(' ')[0];
+  const herFirstName = siteMetadata.couplesDetails.herName.split(' ')[0];
+  return { hisFirstName, herFirstName };
+}

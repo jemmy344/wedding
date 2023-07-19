@@ -94,7 +94,7 @@ interface SiteMetadata {
   siteLogo: string;
   locale: string;
   logoSize: string;
-  logoColor:string;
+  logoColor: string;
   analytics: {
     plausibleDataDomain: string;
     simpleAnalytics: boolean;
@@ -136,4 +136,5 @@ const siteMetadata: SiteMetadata = {
   },
 };
 
-export { siteMetadata, couplesDetails };
+export { couplesDetails, siteMetadata };
+
