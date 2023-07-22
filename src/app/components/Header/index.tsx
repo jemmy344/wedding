@@ -161,7 +161,7 @@ const CircleSvg = () => {
                     viewBox="0 0 300 300"
                     enableBackground="new 0 0 300 300"
                     xmlSpace="preserve"
-                    style={{ transformOrigin: "50% 50%" }}
+                    style={{ transformOrigin: "20% 20%" }}
                     className=" w-[300px] h-[300px] inset-0"
                     variants={containerVariants}
                     initial="initial"
