@@ -5,6 +5,7 @@ import { classNames, getFirstNames } from "@/utils/utils";
 import { motion } from "framer-motion";
 import { Bars } from 'react-loader-spinner';
 import Tilt from 'react-parallax-tilt';
+import ParticlesComponent from "../Particles";
 
 
 
@@ -224,16 +225,19 @@ const CircleSvg = () => {
 
 const TopSection = () => {
     return (
+        <div className="h-screen">
+            <ParticlesComponent />
+            <div className="w-full">
+                <Header />
+                <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
+                    <div className="h-screen w-full relative cursor-context-menu">
+                        <Name />
 
-        <div className="w-full">
-            <Header />
-            <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
-                <div className="h-screen w-full relative cursor-context-menu">
-                    <Name />
-
+                    </div>
                 </div>
             </div>
         </div>
+
 
 
 
