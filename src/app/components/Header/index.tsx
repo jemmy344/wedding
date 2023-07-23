@@ -136,7 +136,6 @@ const Name = () => {
             </div>
           </div>
         </Tilt>
-        <CircleSvg />
       </div>
     </div>
   );
@@ -178,13 +177,13 @@ const CircleSvg = () => {
           xmlnsXlink="http://www.w3.org/1999/xlink"
           x="0px"
           y="0px"
-          width="100%"
-          height="100%"
+          width="20%"
+          height="20%"
           viewBox="0 0 300 300"
           enableBackground="new 0 0 300 300"
           xmlSpace="preserve"
           style={{ transformOrigin: "50% 50%" }}
-          className=" w-[300px] h-[300px] inset-0"
+          className=" w-[400px] h-[400px] inset-0"
           variants={containerVariants}
           initial="initial"
           animate="animate"
@@ -249,6 +248,9 @@ const TopSection = () => {
         <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
           <div className="h-screen w-full relative cursor-context-menu">
             <Name />
+            <div className="absolute inset-0 w-full flex flex-col justify-center items-center top-[50%]">
+              <CircleSvg />
+            </div>
           </div>
         </div>
       </div>
