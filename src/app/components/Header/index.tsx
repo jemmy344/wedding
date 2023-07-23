@@ -283,7 +283,7 @@ const CircleSvg = () => {
                   We did it - We got married ♡ Praise Jesus.
                 </textPath>
               ) : (
-                <textPath href="#circlePath">You are invited.</textPath>
+                <textPath href="#circlePath">We are getting married on August 19,2023.</textPath>
               )}
             </text>
           </g>
