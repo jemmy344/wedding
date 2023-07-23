@@ -31,3 +31,26 @@ export const getFirstNames = () => {
   const herFirstName = siteMetadata.couplesDetails.herName.split(' ')[0];
   return { hisFirstName, herFirstName };
 }
+
+export const daysUntil = (date: Date) => {
+  const targetDate = date
+
+  // Get the current date
+  const currentDate = new Date();
+
+  // Calculate the time difference in milliseconds
+  const timeDifference = targetDate.getTime() - currentDate.getTime();
+
+  // Convert milliseconds to days
+  const daysUntil = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+  return daysUntil;
+}
+export const getEndOfDayTime = (date: Date) => {
+  const endOfDay = new Date(date);
+  endOfDay.setHours(23, 59, 59, 999);
+  return endOfDay;
+};
+export const hasDateElapsed = (targetDate: Date) => {
+  const now = new Date();
+  return targetDate < now;
+}
