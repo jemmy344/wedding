@@ -120,14 +120,14 @@ const CircleSvg = () => {
             >
               {hasDateElapsedValue ? (
                 <textPath
-                  className="font-secondary font-normal text-[18px]"
+                  className="font-secondary font-bold text-[18px]"
                   href="#circlePath"
                 >
                   We did it - We got married ♡ Praise Jesus.
                 </textPath>
               ) : (
                 <textPath
-                  className="font-q font-normal text-[18px]"
+                  className="font-q font-bold text-[18px]"
                   href="#circlePath"
                 >
                   We are getting married on{" "}
