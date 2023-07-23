@@ -1,5 +1,2 @@
-import topImage from '../assets/img/top-image.jpg';
-
-export {
-    topImage
-}
+import topImage from "../assets/img/Wedding.png";
+export { topImage };
