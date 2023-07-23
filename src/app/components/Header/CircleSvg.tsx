@@ -1,5 +1,5 @@
 import { siteMetadata } from "@/data/siteMetadata";
-import { hasDateElapsed } from "@/utils/utils";
+import { getFormattedDate, hasDateElapsed } from "@/utils/utils";
 import CountdownComponent from "./Countdown";
 
 import { motion } from "framer-motion";
@@ -111,9 +111,6 @@ const CircleSvg = () => {
 
             <text
               style={{
-                fontFamily: "Helvetica Neue,Arial",
-                fontSize: "18.7px",
-                fontWeight: 700,
                 fill: "#eea187",
                 transition: "fill .3 ease",
                 transform: "scale(.777)",
@@ -122,11 +119,23 @@ const CircleSvg = () => {
               fill="#000"
             >
               {hasDateElapsedValue ? (
-                <textPath href="#circlePath">
+                <textPath
+                  className="font-secondary font-normal text-[18px]"
+                  href="#circlePath"
+                >
                   We did it - We got married ♡ Praise Jesus.
                 </textPath>
               ) : (
-                <textPath href="#circlePath">We are getting married on August 19, 2023.</textPath>
+                <textPath
+                  className="font-q font-normal text-[18px]"
+                  href="#circlePath"
+                >
+                  We are getting married on{" "}
+                  {`${getFormattedDate(
+                    siteMetadata.couplesDetails.weddingDate
+                  )}`}{" "}
+                  &nbsp;
+                </textPath>
               )}
             </text>
           </g>

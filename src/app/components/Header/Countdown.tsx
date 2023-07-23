@@ -45,14 +45,17 @@ const CountdownComponent: React.FC = () => {
   }, [counter]);
 
   return (
-    <span className="countdown font-mono text-6xl">
-      <span
-        ref={counterElementRef}
-        style={{
-          ...{ "--value": counter },
-        }}
-      ></span>
-    </span>
+    <div className="text-center">
+      <span className="countdown font-marhey text-6xl text-center">
+        <span
+          ref={counterElementRef}
+          style={{
+            ...{ "--value": counter },
+          }}
+        ></span>
+      </span>
+      <p className="text-center font-primary -mt-4">Days</p>
+    </div>
   );
 };
 export default CountdownComponent;

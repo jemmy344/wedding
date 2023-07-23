@@ -1,4 +1,5 @@
 import { siteMetadata } from "@/data/siteMetadata";
+import moment from "moment";
 
 // Function to pick the first words
 export function pickFirstWords(hisName: string, herName: string) {
@@ -54,3 +55,8 @@ export const hasDateElapsed = (targetDate: Date) => {
   const now = new Date();
   return targetDate < now;
 }
+export const getFormattedDate = (inputDate: Date) => {
+  // Assuming inputDate is a valid date string or Date object
+  const currentDate = moment(inputDate);
+  return currentDate.format('MMMM D, YYYY');
+};
