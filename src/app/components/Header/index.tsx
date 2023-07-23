@@ -8,12 +8,11 @@ import { classNames, getFirstNames, hasDateElapsed } from "@/utils/utils";
 
 import { motion } from "framer-motion";
 
-import { Bars } from "react-loader-spinner";
-
 import { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import ParticlesComponent from "../Particles";
 import CountdownComponent from "./Countdown";
+import SoundSwitcher from "./SoundSwitcher";
 import "./style.css";
 const Header = () => {
   return (
@@ -90,15 +89,7 @@ const Header = () => {
 
       <div className="navbar-end">
         <a className="">
-          <Bars
-            height="30"
-            width="90"
-            color="#FF9C34"
-            ariaLabel="bars-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          />
+          <SoundSwitcher />
         </a>
       </div>
     </div>
@@ -333,12 +324,11 @@ const CircleSvg = () => {
 const TopSection = () => {
   return (
     <div className="h-screen">
-      <ParticlesComponent />
-
       <div className="w-full">
         <Header />
 
         <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
+          <ParticlesComponent />
           <div className="h-screen w-full relative cursor-context-menu">
             <Name />
             <div className="absolute inset-0 w-full flex flex-col justify-center items-center top-[90%]">
