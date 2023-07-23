@@ -1,10 +1,17 @@
 "use client";
+
 import { HeaderNavLinks, headerNavLinks } from "@/data/headerNavLinks";
+
 import { siteMetadata } from "@/data/siteMetadata";
+
 import { classNames, getFirstNames } from "@/utils/utils";
+
 import { motion } from "framer-motion";
+
 import { Bars } from "react-loader-spinner";
+
 import Tilt from "react-parallax-tilt";
+
 import ParticlesComponent from "../Particles";
 
 const Header = () => {
@@ -31,10 +38,13 @@ const Header = () => {
               />
             </svg>
           </label>
+
           <ul
             tabIndex={0}
-            className="menu 
-                    menu-sm dropdown-content mt-3 z-[301] 
+            className="menu
+
+                    menu-sm dropdown-content mt-3 z-[301]
+
                     p-2 shadow bg-base-100 rounded-box w-52"
           >
             {headerNavLinks.map((navItem: HeaderNavLinks) => (
@@ -44,9 +54,11 @@ const Header = () => {
             ))}
           </ul>
         </div>
+
         <a
           className={classNames(
             `lg:text-2xl text-3xl text-[#FF9C34] font-secondary`,
+
             `normal-case`
           )}
         >
@@ -56,10 +68,12 @@ const Header = () => {
             : siteMetadata.siteLogo}
         </a>
       </div>
+
       <div className="navbar-center hidden lg:flex text-white">
         {headerNavLinks.map((navItem: HeaderNavLinks) => (
           <div
             className="hover:text-secondary active:text-secondary
+
                              focus:text-secondary"
             key={navItem.title}
           >
@@ -96,6 +110,7 @@ const Name = () => {
   return (
     <div className="">
       <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-[70%]" />
+
       <div className="absolute inset-0 flex flex-col justify-center items-center z-[100] w-full">
         <Tilt gyroscope={true} perspective={2000}>
           <div
@@ -121,15 +136,21 @@ const Name = () => {
                 className="w-full flex justify-center items-center"
                 style={{
                   transformStyle: "preserve-3d",
+
                   position: "relative",
+
                   willChange: "transform",
-                  transform: `perspective(500px) rotateX(0.73deg) 
+
+                  transform: `perspective(500px) rotateX(0.73deg)
+
                                     rotateY(7.48deg) scale3d(1, 1, 1)`,
                 }}
               >
                 <div className="lg:text-6xl lg:mt-40 text-5xl flex justify-center items-center inset-0 font-primary w-full  h-[40px]">
                   <p className="text-[#f7f1e2]">{coupleNames.hisFirstName}</p>
+
                   <p className="text-[#e15f35]">&nbsp;&&nbsp;</p>
+
                   <p className="text-[#f7f1e2]">{coupleNames.herFirstName}</p>
                 </div>
               </div>
@@ -145,21 +166,29 @@ const CircleSvg = () => {
   const containerVariants = {
     initial: {
       rotate: 0,
+
       transition: {
         duration: 8,
+
         ease: "linear",
+
         repeat: Infinity,
       },
     },
+
     animate: {
       rotate: 360,
+
       transition: {
         duration: 8,
+
         ease: "linear",
+
         repeat: Infinity,
       },
     },
   };
+
   return (
     <div
       className=""
@@ -204,6 +233,7 @@ const CircleSvg = () => {
               d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
             ></path>
           </defs>
+
           <circle cx="150" cy="100" r="75" fill="none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -224,8 +254,10 @@ const CircleSvg = () => {
               </g>
             </svg>
           </circle>
+
           <g>
             <use href="#circlePath" fill="none"></use>
+
             <text fill="#000">
               <textPath href="#circlePath">
                 We did it - We got married ♡ Praise Jesus.
@@ -234,6 +266,7 @@ const CircleSvg = () => {
           </g>
         </motion.svg>
       </div>
+
       <div className="countdown-wrapper">
         <div
           className="spinning-smiley is-inview"
@@ -253,8 +286,10 @@ const TopSection = () => {
   return (
     <div className="h-screen">
       <ParticlesComponent />
+
       <div className="w-full">
         <Header />
+
         <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
           <div className="h-screen w-full relative cursor-context-menu">
             <Name />
