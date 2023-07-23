@@ -94,10 +94,10 @@ const Name = () => {
   const coupleNames = getFirstNames();
 
   return (
-    <div className="h-full">
+    <div className="">
       <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-[70%]" />
       <div className="absolute inset-0 flex flex-col justify-center items-center z-[100] w-full">
-        <Tilt gyroscope={true}>
+        <Tilt gyroscope={true} perspective={2000}>
           <div
             data-scroll="true"
             data-scroll-speed="3"
@@ -127,7 +127,7 @@ const Name = () => {
                                     rotateY(7.48deg) scale3d(1, 1, 1)`,
                 }}
               >
-                <div className="lg:text-8xl lg:mt-40 text-5xl flex justify-center items-center inset-0 font-primary w-full">
+                <div className="lg:text-6xl lg:mt-40 text-5xl flex justify-center items-center inset-0 font-primary w-full  h-[40px]">
                   <p className="text-[#f7f1e2]">{coupleNames.hisFirstName}</p>
                   <p className="text-[#e15f35]">&nbsp;&&nbsp;</p>
                   <p className="text-[#f7f1e2]">{coupleNames.herFirstName}</p>
@@ -170,7 +170,17 @@ const CircleSvg = () => {
           "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 33.3425, 0, 1)",
       }}
     >
-      <div id="circle">
+      <div
+        id="circle"
+        style={{
+          position: "relative",
+          width: "100%",
+          paddingBottom: "100%",
+          overflow: "hidden",
+          WebkitAnimationDelay: "1s",
+          animationDelay: "1s",
+        }}
+      >
         <motion.svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +193,7 @@ const CircleSvg = () => {
           enableBackground="new 0 0 300 300"
           xmlSpace="preserve"
           style={{ transformOrigin: "50% 50%" }}
-          className=" w-[400px] h-[400px] inset-0"
+          className=" w-[400px] h-[400px]"
           variants={containerVariants}
           initial="initial"
           animate="animate"
@@ -248,7 +258,7 @@ const TopSection = () => {
         <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
           <div className="h-screen w-full relative cursor-context-menu">
             <Name />
-            <div className="absolute inset-0 w-full flex flex-col justify-center items-center top-[50%]">
+            <div className="absolute inset-0 w-full flex flex-col justify-center items-center top-[90%]">
               <CircleSvg />
             </div>
           </div>
