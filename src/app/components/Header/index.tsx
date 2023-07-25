@@ -11,7 +11,6 @@ const TopSection = () => {
     <div className="h-screen">
       <div className="w-full">
         <Header />
-
         <div className="absolute inset-0 bg-topImage  bg-cover bg-center lg:bg-top bg-no-repeat w-full">
           <ParticlesComponent />
           <div className="h-screen w-full relative cursor-context-menu">

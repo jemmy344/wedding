@@ -23,7 +23,7 @@ const SoundSwitcher: React.FC = () => {
   }, [isOn]);
 
   return (
-    <label className="swap swap-flip">
+    <label className="swap swap-flip cursor-pointer z-[1501]">
       {/* this hidden checkbox controls the state */}
       <input type="checkbox" checked={isOn} onChange={handleSwitchToggle} />
 
