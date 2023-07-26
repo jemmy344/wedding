@@ -39,8 +39,8 @@ const couplesDetails: CouplesDetails = {
   paymentLinks: [
     {
       provider: "PayPal",
-      providerLogo: "",
-      link: "",
+      providerLogo: "https://www.paypalobjects.com/digitalassets/c/website/logo/full-text/pp_fc_hl.svg",
+      link: "https://www.paypal.me/priscaDA",
     },
     {
       provider: "Kuda",
