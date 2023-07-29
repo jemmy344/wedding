@@ -3,8 +3,11 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 
-const ParticlesComponent = () => {
+const ParticlesComponent: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const particleOptions: any = {
+    fullScreen: { enable: false },
     background: {
       color: {
         value: "transparent", // Set the background color to transparent
@@ -92,7 +95,7 @@ const ParticlesComponent = () => {
     []
   );
   return (
-    <div className="z-[100]" style={{ position: "relative" }}>
+    <div className="z-[100] h-screen" style={{ position: "relative" }}>
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -102,6 +105,7 @@ const ParticlesComponent = () => {
         loaded={particlesLoaded}
         options={particleOptions}
       />
+      {children}
     </div>
   );
 };

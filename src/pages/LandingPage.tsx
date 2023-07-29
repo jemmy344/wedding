@@ -1,5 +1,6 @@
 import TopSection from "@/app/components/Header";
 import OurStory from "@/app/components/OurStory";
+import PhotoGallery from "@/app/components/PhotoGallery";
 import WhenWhere from "@/app/components/WhenWhere";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -10,6 +11,7 @@ function LandingPage() {
         <TopSection />
         <OurStory />
         <WhenWhere />
+        <PhotoGallery />
       </ParallaxProvider>
     </div>
   );

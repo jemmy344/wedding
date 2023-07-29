@@ -6,8 +6,8 @@ import SoundSwitcher from "./SoundSwitcher";
 
 const Header = () => {
   return (
-    <div className="relative z-[99999999]">
-      <Parallax speed={50} translateY={[200, 0]}>
+    <div className="relative z-[99999]">
+      <Parallax speed={50} translateY={[100, -200]}>
         <div className="navbar  p-10 w-full">
           <div className="navbar-start">
             <div className="dropdown">
