@@ -8,8 +8,8 @@ function LandingPage() {
     <div className="w-full ">
       <ParallaxProvider scrollAxis="vertical">
         <TopSection />
-        <OurStory />
         <WhenWhere />
+        <OurStory />
       </ParallaxProvider>
     </div>
   );

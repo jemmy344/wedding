@@ -1,77 +1,29 @@
 import React from "react";
-
+import { siteMetadata } from "@/data/siteMetadata";
+import GoogleMap from './GoogleMap';
 
 const WhenWhere = () => {
-    return (
-        <div className="overflow-hidden">
-          <div className="flex -mx-4 img-ticker">
-            {/* Original set of images */}
-            {/* Each image is a grid column with width 16rem (w-64) and horizontal margin 1rem (mx-4) */}
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x341/f4ccccff/434343?text=1"
-              alt="Image 1"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x192/f4ccccff/434343?text=2"
-              alt="Image 2"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x341/f4ccccff/434343?text=3"
-              alt="Image 3"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x192/f4ccccff/434343?text=4"
-              alt="Image 4"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x341/f4ccccff/434343?text=5"
-              alt="Image 5"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x192/f4ccccff/434343?text=6"
-              alt="Image 6"
-            />
-    
-            {/* Copy set of images */}
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x341/f4ccccff/434343?text=1"
-              alt="Image 1 Copy"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x192/f4ccccff/434343?text=2"
-              alt="Image 2 Copy"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x341/f4ccccff/434343?text=3"
-              alt="Image 3 Copy"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x192/f4ccccff/434343?text=4"
-              alt="Image 4 Copy"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x341/f4ccccff/434343?text=5"
-              alt="Image 5 Copy"
-            />
-            <img
-              className="w-64 mx-4 self-start flex-none"
-              src="https://via.placeholder.com/256x192/f4ccccff/434343?text=6"
-              alt="Image 6 Copy"
-            />
+  return (
+    <div className="flex justify-center">
+      <div className="p-5">
+        <div className="flex row">
+          <div className="col-6">
+            <a href="#" className="block max-w-sm p-6 bg-brown border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h1>August</h1>
+            </a>
+          </div>
+          <div className="col-6">
+            <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <div className="text-9xl font-bold">19th</div>
+            </a>
           </div>
         </div>
-    )
+        <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+          <GoogleMap />
+        </a>
+      </div>
+    </div>
+  );
 }
 
 export default WhenWhere;
