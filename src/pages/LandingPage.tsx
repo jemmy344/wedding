@@ -10,8 +10,8 @@ function LandingPage() {
       <ParallaxProvider scrollAxis="vertical">
         <TopSection />
         <WhenWhere />
-        <PhotoGallery />
         <OurStory />
+        <PhotoGallery />
       </ParallaxProvider>
     </div>
   );

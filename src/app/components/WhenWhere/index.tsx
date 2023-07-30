@@ -1,27 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import Model from './Model';
+import { topImage } from "../../../assets/index";
 import { siteMetadata } from "@/data/siteMetadata";
-import GoogleMap from './GoogleMap';
 
 const WhenWhere = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="flex justify-center">
-      <div className="p-5">
-        <div className="flex row">
-          <div className="col-6">
-            <a href="#" className="block max-w-sm p-6 bg-brown border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              <h1>August</h1>
-            </a>
-          </div>
-          <div className="col-6">
-            <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-              <div className="text-9xl font-bold">19th</div>
-            </a>
-          </div>
+    <div className="hero min-h-screen">
+      <div className="hero-content flex-col lg:flex-row">
+        <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+          <h1 className="text-5xl font-bold">19th August 2023</h1>
+          <p className="py-6">{siteMetadata.couplesDetails.hisName} and {siteMetadata.couplesDetails.herName} are having a small celebration! We&apos;re excited to say &quot;I do&quot;, in the eyes of God, here in Abuja, Nigeria.</p>
+          <button className="btn btn-primary" onClick={handleOpenModal}>Map</button>
         </div>
-        <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <GoogleMap />
-        </a>
       </div>
+      {showModal && <Model onClose={handleCloseModal} />}
     </div>
   );
 }
