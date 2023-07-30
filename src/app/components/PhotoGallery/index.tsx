@@ -1,5 +1,5 @@
 import { photos } from "@/data/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import Gallery from "react-photo-gallery";
 import "./style.css";
 
@@ -16,33 +16,7 @@ const PhotoGallery = () => {
     setCurrentImage(0);
     setViewerIsOpen(false);
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const evenColumns = document.querySelectorAll(
-        ".react-photo-gallery--gallery > div img:nth-child(even)"
-      );
-      const oddColumns = document.querySelectorAll(
-        ".react-photo-gallery--gallery > div img:nth-child(odd)"
-      );
 
-      // Adjust the sensitivity for the parallax effect
-      const sensitivity = 0.3; // You can adjust this value based on your preference
-
-      evenColumns.forEach((column: any) => {
-        column.style.transform = `translateZ(${scrollY * sensitivity}px)`;
-      });
-
-      oddColumns.forEach((column: any) => {
-        column.style.transform = `translateZ(-${scrollY * sensitivity}px)`;
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div className="mx-40">
       <Gallery
