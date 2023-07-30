@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Model from './Model';
-import { topImage } from "../../../assets/index";
+import Image from "next/image";
+
 import { siteMetadata } from "@/data/siteMetadata";
 
 const WhenWhere = () => {
@@ -17,7 +18,7 @@ const WhenWhere = () => {
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row">
-        <img src="/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+        <Image src="/images/image1.jpg" className="max-w-sm rounded-lg shadow-2xl" width={500} height={500} alt="couple" />
         <div>
           <h1 className="text-5xl font-bold">19th August 2023</h1>
           <p className="py-6">{siteMetadata.couplesDetails.hisName} and {siteMetadata.couplesDetails.herName} are having a small celebration! We&apos;re excited to say &quot;I do&quot;, in the eyes of God, here in Abuja, Nigeria.</p>
