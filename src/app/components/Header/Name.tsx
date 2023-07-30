@@ -8,7 +8,7 @@ const Name = () => {
     <div className="">
       <div className="absolute inset-0 bg-gradient-to-r from-[#4e2a05] via-[#2b1d0b] to-[#2b1d0b] opacity-[70%]" />
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-[4000] w-full">
+      <div className="absolute inset-0 flex flex-col justify-center items-center z-[2000] w-full">
         <Parallax speed={50} translateY={[100, -100]}>
           <Tilt gyroscope={true} perspective={2000}>
             <div

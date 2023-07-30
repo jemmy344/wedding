@@ -2,11 +2,13 @@
 .react-photo-gallery--gallery div  {
   display: flex;
   flex-wrap: wrap;
+   perspective: 1000px; /* Adjust this value for desired perspective effect */
+    transition: transform 0.5s ease;
+    overflow: hidden;
 }
 
 /* Styles for each column */
 .react-photo-gallery--gallery  div img {
-
   overflow: hidden;
 }
 
@@ -18,11 +20,13 @@
 /* Style for even columns */
 .react-photo-gallery--gallery > div img:nth-child(even) {
   animation: floatUpDown 5s infinite alternate;
+   transform: translateZ(-200px); /* Adjust this value for desired depth */
 }
 
 /* Style for odd columns */
 .react-photo-gallery--gallery > div img:nth-child(odd) {
   animation: floatDownUp 5s infinite alternate;
+    transform: translateZ(200px); /* Odd columns stay in the default layer */
 }
 
 /* Keyframes for even column animation (float upwards and downwards) */
@@ -43,4 +47,13 @@
   to {
     transform: translateY(calc(100px * 1)); /* Adjust this value for desired downward floating height */
   }
+}
+
+ 
+ 
+
+
+/* Hover effect (optional) */
+.react-photo-gallery--gallery div:hover img {
+  transform: scale(2.1); /* You can adjust the scale value to control the zoom on hover */
 }
