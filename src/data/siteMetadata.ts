@@ -25,12 +25,15 @@ interface CouplesDetails {
   memorableStory: string;
   theProposal: string;
   thankYouMessage: string;
+  whenWhereContent: string;
 }
 
 const couplesDetails: CouplesDetails = {
   hisName: "Samuel Matthew",
   herName: "Priscilla Aremu",
   preferredThemeForEvent: "PSAM23",
+  whenWhereContent: `Samuel and Priscilla are having a small
+             celebration! We're excited to say "I do, in the eyes of God, here in Abuja, Nigeria.`,
   media: {
     preEngagementPictures: [],
     postEngagementPictures: [],

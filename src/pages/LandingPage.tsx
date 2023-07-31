@@ -9,10 +9,10 @@ function LandingPage() {
     <div className="w-full ">
       <ParallaxProvider scrollAxis="vertical">
         <TopSection />
-        <WhenWhere />
-        <OurStory />
-        <PhotoGallery />
       </ParallaxProvider>
+      <OurStory />
+      <WhenWhere />
+      <PhotoGallery />
     </div>
   );
 }
