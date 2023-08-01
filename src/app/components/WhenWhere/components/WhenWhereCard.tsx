@@ -26,10 +26,10 @@ const WhenWhereCard: React.FunctionComponent<IAppProps> = () => {
           </div>
           <div className={styles["date-box"]}>
             <span className={styles["month"]}>
-              {moment(siteMetadata.couplesDetails.weddingDate).format("MMM")}
+              {moment(siteMetadata.couplesDetails.weddingDate).format("MMMM")}
             </span>
             <span className={styles["date"]}>
-              {siteMetadata.couplesDetails.weddingDate.getDay()}
+              {siteMetadata.couplesDetails.weddingDate.getDate()}
             </span>
           </div>
         </div>

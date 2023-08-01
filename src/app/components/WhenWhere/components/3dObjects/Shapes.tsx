@@ -22,7 +22,7 @@ export function Shapes({ isHover, isPress, mouseX, mouseY }: ShapesProps) {
       <Camera mouseX={mouseX} mouseY={mouseY} />
       <MotionConfig transition={transition}>
         <motion.group
-          //   center={[0, 0, 0]}
+          center={[0, 0, 0]}
           rotation={[lightRotateX, lightRotateY, 0]}
         >
           <Lights />

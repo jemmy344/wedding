@@ -22,7 +22,7 @@
 
 .when-card:hover {
   background-position: -110.5px 110.5px, -99px 99px;
-  transform: rotate3d(0.5, 1, 0, 30deg);
+  transform: rotate3d(0.5, 1, 0, 10deg);
   background-image: radial-gradient(#e89e85 2px, transparent 2px),
     radial-gradient(#be826e 2px, transparent 2px),
     url("/images/couple-photo2.jpg");
