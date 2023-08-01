@@ -1,18 +1,21 @@
 import { siteMetadata } from "@/data/siteMetadata";
 import moment from "moment";
 import * as React from "react";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 import Button3d from "./3dObjects/Button";
+import GoogleMap from "./GoogleMap";
 import styles from "./css/WhenWhere.module.css";
 interface IAppProps {}
 
 const WhenWhereCard: React.FunctionComponent<IAppProps> = () => {
+  const [isMapOpen, setIsMapOpen] = useState(false);
   const handeClick: MouseEventHandler<HTMLButtonElement> = (evt) => {
-    console.log("it worked");
+    setIsMapOpen(false);
   };
   return (
     <>
       <div className={styles.parent}>
+        {isMapOpen && <GoogleMap onClose={() => setIsMapOpen(false)} />}
         <div className={styles["when-card"]}>
           <div className={styles["content-box"]}>
             <span
