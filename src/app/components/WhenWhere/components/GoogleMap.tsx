@@ -2,11 +2,11 @@ import { createPortal } from "react-dom";
 import MapModalHeader from "./MapModalHeader";
 import styles from "./css/modal.module.css";
 interface IGoogleMapProps {
-  onClose: () => void;
+  onClose: (bool: boolean) => void;
 }
 const GoogleMap = ({ onClose }: IGoogleMapProps) => {
   return createPortal(
-    <div className={`${styles.modalBackground} opacity-90`} onClick={onClose}>
+    <div className={`${styles.modalBackground} opacity-90 z-20`}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <MapModalHeader onClose={onClose} />
         <iframe
