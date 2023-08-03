@@ -10,12 +10,12 @@ interface IAppProps {}
 const WhenWhereCard: React.FunctionComponent<IAppProps> = () => {
   const [isMapOpen, setIsMapOpen] = useState(false);
   const handeClick: MouseEventHandler<HTMLButtonElement> = (evt) => {
-    setIsMapOpen(false);
+    setIsMapOpen(!isMapOpen);
   };
   return (
     <>
       <div className={styles.parent}>
-        {isMapOpen && <GoogleMap onClose={() => setIsMapOpen(false)} />}
+        {isMapOpen && <GoogleMap onClose={setIsMapOpen} />}
         <div className={styles["when-card"]}>
           <div className={styles["content-box"]}>
             <span
@@ -37,7 +37,9 @@ const WhenWhereCard: React.FunctionComponent<IAppProps> = () => {
           </div>
         </div>
       </div>
-      <Button3d text="See Map" onCLickEvt={handeClick} />
+      <div className="z-[10]">
+        <Button3d text="See Map" onCLickEvt={handeClick} />
+      </div>
     </>
   );
 };
