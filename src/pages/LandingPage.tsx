@@ -1,3 +1,4 @@
+import Footer from "@/app/components/Footer";
 import TopSection from "@/app/components/Header";
 import OurStory from "@/app/components/OurStory";
 import PhotoGallery from "@/app/components/PhotoGallery";
@@ -13,6 +14,7 @@ function LandingPage() {
       <OurStory />
       <WhenWhere />
       <PhotoGallery />
+      <Footer />
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 export const photos: ImageProps[] = [
     {
-        src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+        src: "/images/pic1",
         width: 800,
         height: 599
     },
