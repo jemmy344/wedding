@@ -3,8 +3,11 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 
-const ParticlesComponent = () => {
+const ParticlesComponent: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const particleOptions: any = {
+    fullScreen: { enable: false },
     background: {
       color: {
         value: "transparent", // Set the background color to transparent
@@ -78,10 +81,6 @@ const ParticlesComponent = () => {
 
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
-
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
@@ -92,16 +91,19 @@ const ParticlesComponent = () => {
     []
   );
   return (
-    <div className="z-[100]" style={{ position: "relative" }}>
+    <div className="z-[101] h-screen block" style={{ position: "relative" }}>
       <Particles
         id="tsparticles"
         init={particlesInit}
+        className="h-full"
         width="100%"
+        canvasClassName="z-[99999]"
         height="100%"
         // className="h-screen w-full"
         loaded={particlesLoaded}
         options={particleOptions}
       />
+      {children}
     </div>
   );
 };

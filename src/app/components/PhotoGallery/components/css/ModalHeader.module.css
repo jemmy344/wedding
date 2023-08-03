@@ -1,0 +1,22 @@
+/* Modal Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.closeButton,
+.playButton {
+  cursor: pointer;
+  font-size: 24px;
+  color: #555;
+}
+
+.closeButton {
+  padding: 0;
+}
+
+.playButton {
+  padding: 0 5px;
+}

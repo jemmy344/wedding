@@ -1,0 +1,27 @@
+/* Main Component Styles */
+.flex {
+  display: flex;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Images Grid */
+div > div {
+  cursor: pointer;
+  margin: 10px;
+}
+
+img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
