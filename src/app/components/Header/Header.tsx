@@ -14,7 +14,7 @@ const Header = () => {
               <div className="dropdown">
                 <label
                   tabIndex={0}
-                  className="btn btn-ghost lg:hidden text-[#FF9C34]"
+                  className="btn btn-ghost lg:hidden text-rose-gold"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const Header = () => {
 
               <a
                 className={classNames(
-                  `lg:text-2xl text-3xl text-[#FF9C34] font-secondary`,
+                  `lg:text-2xl text-3xl text-rose-gold font-secondary`,
 
                   `normal-case`
                 )}

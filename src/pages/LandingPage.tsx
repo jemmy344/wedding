@@ -14,9 +14,9 @@ function LandingPage() {
           <TopSection />
         </ParallaxProvider>
       </div>
-      <div className={`${style.item}`}>
+      {/*<div className={`${style.item}`}>
         <OurStory />
-      </div>
+      </div>*/}
       <div className={`${style.item}`}>
         <WhenWhere />
       </div>
@@ -25,6 +25,7 @@ function LandingPage() {
       </div>
       <div className={`${style.item}`}>
         <PhotoGallery />
+        <Footer />
       </div>
     </div>
   );

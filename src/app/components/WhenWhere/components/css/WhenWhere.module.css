@@ -31,8 +31,8 @@
 .content-box {
   background: linear-gradient(
     135deg,
-    rgba(232, 158, 133, 0.81) 0%,
-    rgba(232, 158, 255, 1) 100%
+    rgba(183, 110, 121, 1) 0%,
+    rgba(200, 162, 200, 1) 100%
   );
   border-radius: 0px 100px 10px 10px;
   /* border-right: 2px solid white; */
