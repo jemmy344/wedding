@@ -26,8 +26,13 @@ interface CouplesDetails {
   story: {
     title: string;
     content: string;
-  }[]
-
+  }[],
+  accountDetails: {
+    accountName: string;
+    accountNumber: string;
+    bankName: string;
+    bankLogo: React.FC;
+  },
   thankYouMessage: string;
   whenWhereContent: string;
 }
@@ -98,6 +103,12 @@ const couplesDetails: CouplesDetails = {
    forward to creating many more cherished memories with you in the future.
    #PSAM'23
   `,
+  accountDetails: {
+    accountName: "Account Name Placeholder",
+    accountNumber: "35446578634",
+    bankName: "PlaceHolder Bank",
+    bankLogo: KudaSvg
+  }
 };
 
 interface SiteMetadata {
