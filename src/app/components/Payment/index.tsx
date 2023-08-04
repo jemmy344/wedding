@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { siteMetadata } from "@/data/siteMetadata";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,7 +9,7 @@ import "./css/style.css";
 export default function Payment() {
   const [showAccountModal, setShowAccountModal] = useState(false);
   return (
-    <div className="flex justify-center items-center w-full">
+    <div id="gift" className="flex justify-center items-center w-full">
       {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
         <div className="card ">
