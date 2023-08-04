@@ -21,13 +21,13 @@ module.exports = {
         topImage: "url('/top-image.jpg')",
       },
       backgroundColor: {
-        primary: "#7b3f00",
-        secondary: "#b76e79",
+        primary: "#C8A2C8",
+        secondary: "#5C3317",
         outline: "#C8A2C8",
       },
       textColor: {
-        primary: "#7b3f00",
-        secondary: "#b76e79",
+        primary: "#B76E79",
+        secondary: "#5C3317",
         outline: "#C8A2C8",
       },
       fontFamily: {
