@@ -11,6 +11,7 @@ export default function Payment() {
       {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
         <div className="card ">
+          <img src="/images/gift.gif" height={"100px"} width={"100px"} />
           <p className="heading font-primary text-rose-gold">Gifts</p>
           <p className="para">
             We have most things we need for life and love. if you want to bless
