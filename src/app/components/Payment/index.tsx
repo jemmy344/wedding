@@ -11,7 +11,7 @@ export default function Payment() {
       {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
         <div className="card ">
-          <p className="heading">Gifts</p>
+          <p className="heading font-primary text-rose-gold">Gifts</p>
           <p className="para">
             We have most things we need for life and love. if you want to bless
             us with a gift, we can always use cash gifts as we move to our new
