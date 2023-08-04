@@ -1,11 +1,14 @@
 import { siteMetadata } from "@/data/siteMetadata";
 import Link from "next/link";
-import "./style.css";
-export interface IPaymentProps {}
+import { useState } from "react";
+import Modal from "./Modal";
+import "./css/style.css";
 
-export default function Payment(props: IPaymentProps) {
+export default function Payment() {
+  const [showAccountModal, setShowAccountModal] = useState(false);
   return (
     <div className="flex justify-center items-center w-full">
+      {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
         <div className="card ">
           <p className="heading">Gifts</p>
@@ -16,7 +19,7 @@ export default function Payment(props: IPaymentProps) {
             this journey together.
           </p>
           <div className="overlay"></div>
-          <div className="flex w-[20%] justify-center items-center gap-7">
+          <div className="flex w-[20%] justify-center items-center gap-7 z-[0]">
             {siteMetadata.couplesDetails.paymentLinks.map((links) => (
               <Link
                 passHref={true}
@@ -27,6 +30,12 @@ export default function Payment(props: IPaymentProps) {
                 <links.providerLogo></links.providerLogo>
               </Link>
             ))}
+            <button
+              onClick={() => setShowAccountModal(true)}
+              className="btn  card-btn"
+            >
+              <p className="text-base">Account</p>
+            </button>
           </div>
         </div>
       </div>
