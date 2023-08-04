@@ -20,7 +20,13 @@ const PhotoGallery = () => {
   };
 
   return (
-    <div id="photo-album" className="md:mx-40 mx-6">
+    <div id="photo-album" className="md:mx-40 mx-6 pt-8">
+      <div className="flex w-full justify-center items-center">
+        <img src="/couple.gif" alt="GIF" className="h-48 w-78" />
+      </div>
+      <div className="flex w-full justify-center items-center pb-6">
+      <h1 className="font-primary text-rose-gold">Some of our favourite photos</h1>
+      </div>
       <Gallery
         photos={photos.map((photo) => ({
           height: photo.height,
