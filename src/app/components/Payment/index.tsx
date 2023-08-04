@@ -7,7 +7,7 @@ import "./css/style.css";
 export default function Payment() {
   const [showAccountModal, setShowAccountModal] = useState(false);
   return (
-    <div className="flex justify-center items-center w-full">
+    <div id="gift" className="flex justify-center items-center w-full">
       {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
         <div className="card ">

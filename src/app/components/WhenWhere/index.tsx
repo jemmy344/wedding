@@ -2,7 +2,7 @@ import WhenWhereCard from "./components/WhenWhereCard";
 
 const WhenWhere = () => {
   return (
-    <div className="hero min-h-screen">
+    <div id="when-where" className="hero min-h-screen">
       <WhenWhereCard />
     </div>
   );
