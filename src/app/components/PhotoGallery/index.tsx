@@ -20,7 +20,7 @@ const PhotoGallery = () => {
   };
 
   return (
-    <div className="mx-40">
+    <div id="photo-album" className="md:mx-40 mx-6">
       <Gallery
         photos={photos.map((photo) => ({
           height: photo.height,
@@ -30,7 +30,8 @@ const PhotoGallery = () => {
         }))}
         columns={(containerWidth: number) => {
           let columns = 1;
-          if (containerWidth >= 500) columns = 3;
+          if (containerWidth >= 500) columns = 2;
+          if (containerWidth >= 700) columns = 3;
           if (containerWidth >= 900) columns = 4;
           if (containerWidth >= 1500) columns = 5;
           return columns;

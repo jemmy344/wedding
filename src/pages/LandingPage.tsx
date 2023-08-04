@@ -1,3 +1,4 @@
+import Footer from "@/app/components/Footer";
 import TopSection from "@/app/components/Header";
 import OurStory from "@/app/components/OurStory";
 import Payment from "@/app/components/Payment";
@@ -13,9 +14,9 @@ function LandingPage() {
           <TopSection />
         </ParallaxProvider>
       </div>
-      <div className={`${style.item}`}>
+      {/*<div className={`${style.item}`}>
         <OurStory />
-      </div>
+      </div>*/}
       <div className={`${style.item}`}>
         <WhenWhere />
       </div>
@@ -24,6 +25,7 @@ function LandingPage() {
       </div>
       <div className={`${style.item}`}>
         <PhotoGallery />
+        <Footer />
       </div>
     </div>
   );

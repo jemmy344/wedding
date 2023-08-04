@@ -31,7 +31,7 @@ const SoundSwitcher: React.FC = () => {
       <Bars
         height="30"
         width="90"
-        color="#FF9C34"
+        color="#B76E79"
         ariaLabel="bars-loading"
         wrapperStyle={{}}
         wrapperClass="swap-on fill-current w-10 h-10"
@@ -45,7 +45,7 @@ const SoundSwitcher: React.FC = () => {
         width="48"
         height="48"
         viewBox="0 0 24 24"
-        fill="#FF9C34"
+        fill="#B76E79"
         // stroke="#FF9C34"
       >
         <path d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z" />
