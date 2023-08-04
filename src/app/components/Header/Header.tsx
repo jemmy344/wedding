@@ -1,4 +1,5 @@
 import { HeaderNavLinks, headerNavLinks } from "@/data/headerNavLinks";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { siteMetadata } from "@/data/siteMetadata";
 import { classNames } from "@/utils/utils";
 import { Parallax } from "react-scroll-parallax";
@@ -42,7 +43,7 @@ const Header = () => {
                 >
                   {headerNavLinks.map((navItem: HeaderNavLinks) => (
                     <li key={navItem.title}>
-                      <a href={navItem.href}>{navItem.title}</a>
+                       <Link to={navItem.href}>{navItem.title}</Link>
                     </li>
                   ))}
                 </ul>

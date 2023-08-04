@@ -47,7 +47,7 @@ const Name = () => {
                   <div className="lg:text-6xl shadow-sm lg:mt-40 text-5xl flex justify-center items-center inset-0 font-primary w-full  h-[40px] flex-wrap">
                     <p className="text-rose-gold">{coupleNames.hisFirstName}</p>
 
-                    <p className="text-chocolate-brown">&nbsp;&&nbsp;</p>
+                    <p className="text-white">&nbsp;&&nbsp;</p>
 
                     <p className="text-rose-gold">{coupleNames.herFirstName}</p>
                   </div>
