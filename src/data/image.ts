@@ -2,7 +2,7 @@
 
 export const photos: ImageProps[] = [
     {
-        src: "/images/pic1",
+        src: "/images/pic1.jpg",
         width: 800,
         height: 599
     },
