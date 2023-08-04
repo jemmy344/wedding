@@ -60,7 +60,7 @@
   width: 100%;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 99;
   border: none;
   opacity: 0;
   scale: 0;
@@ -79,7 +79,7 @@
 }
 
 .card .card-btn:active {
-  scale: 0.95;
+  scale: 0.6;
 }
 
 .overlay::after {

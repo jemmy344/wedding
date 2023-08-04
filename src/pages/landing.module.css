@@ -1,0 +1,10 @@
+.scrollParent {
+  scroll-snap-type: y proximity;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollParent .item {
+  scroll-snap-align: start;
+}
