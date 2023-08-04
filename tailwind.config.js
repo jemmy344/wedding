@@ -18,7 +18,7 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 80% 80%, var(--tw-gradient-stops))",
-        topImage: "url('/top-image.jpg')",
+        topImage: "url('/top-section.jpeg')",
       },
       backgroundColor: {
         primary: "#C8A2C8",
