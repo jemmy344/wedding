@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        lilac: "#C8A2C8",
+        "rose-gold": "#B76E79",
+        "chocolate-brown": "#5C3317",
+        // Additional accent colors can be defined here
+        // e.g., 'light-lilac': '#E9D0E9', 'dark-chocolate': '#3F210D'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
