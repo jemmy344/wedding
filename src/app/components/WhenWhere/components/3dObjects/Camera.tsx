@@ -1,3 +1,4 @@
+'use client'
 import { PerspectiveCameraProps, useThree } from "@react-three/fiber";
 import { MotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
