@@ -2,67 +2,67 @@
 
 export const photos: ImageProps[] = [
     {
-        src: "/images/pic1",
+        src: "/images/pic1.jpg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+        src: "/images/pic2.jpg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+        src: "/images/pic3.jpg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+        src: "/images/pic4.jpg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+        src: "/images/pic5.jpg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+        src: "/images/pic6.jpg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+        src: "/images/pic7.jpeg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+        src: "/images/pic8.jpeg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+        src: "/images/pic9.jpeg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+        src: "/images/pic10.jpeg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+        src: "/images/pic11.jpeg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+        src: "/images/pic12.jpeg",
         width: 800,
         height: 599
     },
     {
-        src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+        src: "/images/pic13.jpeg",
         width: 800,
         height: 599
     }

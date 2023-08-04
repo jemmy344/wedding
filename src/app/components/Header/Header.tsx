@@ -62,12 +62,12 @@ const Header = () => {
               </a>
             </div>
 
-            <div className="navbar-center hidden lg:flex text-white">
+            <div className="navbar-center hidden lg:flex text-primary">
               {headerNavLinks.map((navItem: HeaderNavLinks) => (
                 <div
-                  className="hover:text-secondary active:text-secondary
+                  className="hover:text-outline active:text-outline
 
-                             focus:text-secondary"
+                             focus:text-outline"
                   key={navItem.title}
                 >
                   <a
