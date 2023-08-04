@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { siteMetadata } from "@/data/siteMetadata";
 import Link from "next/link";
 import { useState } from "react";
