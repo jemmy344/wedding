@@ -35,7 +35,7 @@ export function Camera({ mouseX, mouseY, ...props }: CameraProps) {
 
   useLayoutEffect(() => {
     return cameraX.onChange(() => camera.lookAt(scene.position));
-  }, [cameraX]);
+  }, [camera, cameraX, scene.position]);
 
   return (
     <motion.perspectiveCamera

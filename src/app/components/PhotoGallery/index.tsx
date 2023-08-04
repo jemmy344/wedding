@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { photos } from "@/data/image";
 import { useCallback, useState } from "react";
 import Gallery from "react-photo-gallery";
