@@ -1,0 +1,1 @@
+const withTM = require('next-transpile-modules')(['framer-motion-3d']);

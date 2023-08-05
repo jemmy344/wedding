@@ -2,7 +2,7 @@ import { siteMetadata } from "@/data/siteMetadata";
 import moment from "moment";
 import * as React from "react";
 import { MouseEventHandler, useState } from "react";
-import Button3d from "./3dObjects/Button";
+import paymentStyle from "../../Payment/style.module.css";
 import GoogleMap from "./GoogleMap";
 import styles from "./css/WhenWhere.module.css";
 interface IAppProps {}
@@ -38,7 +38,12 @@ const WhenWhereCard: React.FunctionComponent<IAppProps> = () => {
         </div>
       </div>
       <div className="z-[10]">
-        <Button3d text="See Map" onCLickEvt={handeClick} />
+        <button
+          onClick={handeClick}
+          className={`btn z-999999 ${paymentStyle["card-btn"]}`}
+        >
+          <p className="text-base">See Map</p>
+        </button>
       </div>
     </>
   );

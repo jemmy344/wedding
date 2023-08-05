@@ -1,6 +1,6 @@
 .scrollParent {
   scroll-snap-type: y proximity;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }

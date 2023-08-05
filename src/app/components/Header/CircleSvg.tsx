@@ -3,9 +3,9 @@ import { getFormattedDate, hasDateElapsed } from "@/utils/utils";
 import CountdownComponent from "./Countdown";
 
 import { motion } from "framer-motion";
-
 import { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
+import style from "./style.module.css";
 
 const CircleSvg = () => {
   const [hasDateElapsedValue, setHasDateElapsedValue] = useState(false);
@@ -54,7 +54,7 @@ const CircleSvg = () => {
           }}
         >
           <div
-            id="circle"
+            className={`${style.circle}`}
             style={{
               position: "relative",
               width: "100%",
@@ -145,10 +145,10 @@ const CircleSvg = () => {
             </motion.svg>
           </div>
 
-          <div className="countdown-wrapper">
+          <div className={`${style["countdown-wrapper"]}`}>
             {hasDateElapsedValue ? (
               <div
-                className="spinning-smiley is-inview"
+                className={`${style["spinning-smiley is-inview"]}`}
                 data-scroll="true"
                 data-scroll-speed="2"
                 style={{
@@ -176,7 +176,7 @@ const CircleSvg = () => {
                 </svg>
               </div>
             ) : (
-              <div className="countdown-col-element">
+              <div className={`${style["countdown-col-element"]}`}>
                 <CountdownComponent />
               </div>
             )}

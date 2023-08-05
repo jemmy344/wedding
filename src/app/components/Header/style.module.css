@@ -66,11 +66,11 @@
   }
 }
 
-#container {
+.container {
   margin: 0;
 }
 
-#circle {
+.circle {
   position: relative;
   width: 100%;
   padding-bottom: 100%;
@@ -79,7 +79,7 @@
   animation-delay: 1s;
 }
 
-#circle text {
+.circle text {
   font-family: Helvetica Neue, Arial;
   font-size: 18.7px;
   font-weight: 700;
@@ -90,12 +90,12 @@
 }
 
 @media (min-width: 641px) {
-  #circle text {
+  .circle text {
     transform: unset;
   }
 }
 
-#circle svg {
+.circle svg {
   position: relative;
   left: 0;
   top: 0;
