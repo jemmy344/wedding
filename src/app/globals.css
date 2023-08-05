@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marhey:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,28 +31,64 @@
     opacity: 0;
   }
 }
-
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Styles for the container holding the columns */
+.react-photo-gallery--gallery div {
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px; /* Adjust this value for desired perspective effect */
+  transition: transform 0.5s ease;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Styles for each column */
+.react-photo-gallery--gallery div img {
+  overflow: hidden;
+}
+
+/* Apply a transition to the image to create a smooth animation */
+.react-photo-gallery--gallery div img {
+  transition: transform 0.5s ease;
+}
+
+/* Style for even columns */
+.react-photo-gallery--gallery > div img:nth-child(even) {
+  animation: floatUpDown 5s infinite alternate;
+  transform: translateZ(-200px); /* Adjust this value for desired depth */
+}
+
+/* Style for odd columns */
+.react-photo-gallery--gallery > div img:nth-child(odd) {
+  animation: floatDownUp 5s infinite alternate;
+  transform: translateZ(200px); /* Odd columns stay in the default layer */
+}
+
+/* Keyframes for even column animation (float upwards and downwards) */
+@keyframes floatUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(
+      calc(-100px * 1)
+    ); /* Adjust this value for desired upward floating height */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+/* Keyframes for odd column animation (float downwards and upwards) */
+@keyframes floatDownUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(
+      calc(100px * 1)
+    ); /* Adjust this value for desired downward floating height */
+  }
+}
+
+/* Hover effect (optional) */
+.react-photo-gallery--gallery div:hover img {
+  transform: scale(
+    2.1
+  ); /* You can adjust the scale value to control the zoom on hover */
+}

@@ -4,7 +4,6 @@ import { useCallback, useState } from "react";
 import Gallery from "react-photo-gallery";
 import { v4 as uuidv4 } from "uuid";
 import SlideModal from "./components/Modal";
-import "./style.css";
 
 const PhotoGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);

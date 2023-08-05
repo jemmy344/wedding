@@ -4,7 +4,7 @@ import { siteMetadata } from "@/data/siteMetadata";
 import Link from "next/link";
 import { useState } from "react";
 import Modal from "./Modal";
-import "./css/style.css";
+import style from "./style.module.css";
 
 export default function Payment() {
   const [showAccountModal, setShowAccountModal] = useState(false);
@@ -12,10 +12,12 @@ export default function Payment() {
     <div id="gift" className="flex justify-center items-center w-full">
       {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
-        <div className="card ">
+        <div className={`${style.card}`}>
           <img src="/images/gift.gif" height={"100px"} width={"100px"} />
-          <p className="heading font-primary text-rose-gold">Gifts</p>
-          <p className="para">
+          <p className={`${style.heading} font-primary text-rose-gold`}>
+            Gifts
+          </p>
+          <p className={`${style.para}`}>
             We have most things we need for life and love. if you want to bless
             us with a gift, we can always use cash gifts as we move to our new
             place. we will appreciate your prayers and well wishes as we start
@@ -28,14 +30,14 @@ export default function Payment() {
                 passHref={true}
                 href={links.link}
                 key={links.link}
-                className="btn  card-btn"
+                className={`btn  ${style["card-btn"]}`}
               >
                 <links.providerLogo></links.providerLogo>
               </Link>
             ))}
             <button
               onClick={() => setShowAccountModal(true)}
-              className="btn  card-btn"
+              className={`btn  ${style["card-btn"]}`}
             >
               <p className="text-base">Account</p>
             </button>

@@ -4,7 +4,6 @@ import ParticlesComponent from "../Particles";
 import CircleSvg from "./CircleSvg";
 import Header from "./Header";
 import Name from "./Name";
-import "./style.css";
 
 const TopSection = () => {
   return (
