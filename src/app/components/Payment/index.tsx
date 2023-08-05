@@ -23,7 +23,7 @@ export default function Payment() {
             place. we will appreciate your prayers and well wishes as we start
             this journey together.
           </p>
-          <div className="overlay"></div>
+          <div className={`${style.overlay}`}></div>
           <div className="flex w-[20%] justify-center items-center gap-7 z-[0]">
             {siteMetadata.couplesDetails.paymentLinks.map((links) => (
               <Link
