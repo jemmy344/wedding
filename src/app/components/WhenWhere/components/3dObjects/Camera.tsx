@@ -1,3 +1,4 @@
+'use client'
 import { PerspectiveCameraProps, useThree } from "@react-three/fiber";
 import { MotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
@@ -34,7 +35,7 @@ export function Camera({ mouseX, mouseY, ...props }: CameraProps) {
 
   useLayoutEffect(() => {
     return cameraX.onChange(() => camera.lookAt(scene.position));
-  }, [cameraX]);
+  }, [camera, cameraX, scene.position]);
 
   return (
     <motion.perspectiveCamera

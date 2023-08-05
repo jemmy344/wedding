@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unknown-property */
+'use client'
 import { Canvas } from "@react-three/fiber";
 import { MotionConfig, MotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";

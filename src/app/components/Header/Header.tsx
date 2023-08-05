@@ -1,4 +1,5 @@
 import { HeaderNavLinks, headerNavLinks } from "@/data/headerNavLinks";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { siteMetadata } from "@/data/siteMetadata";
 import { classNames } from "@/utils/utils";
 import { Parallax } from "react-scroll-parallax";
@@ -14,7 +15,7 @@ const Header = () => {
               <div className="dropdown">
                 <label
                   tabIndex={0}
-                  className="btn btn-ghost lg:hidden text-[#FF9C34]"
+                  className="btn btn-ghost lg:hidden text-rose-gold"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +43,7 @@ const Header = () => {
                 >
                   {headerNavLinks.map((navItem: HeaderNavLinks) => (
                     <li key={navItem.title}>
-                      <a href={navItem.href}>{navItem.title}</a>
+                       <Link to={navItem.href}>{navItem.title}</Link>
                     </li>
                   ))}
                 </ul>
@@ -50,7 +51,7 @@ const Header = () => {
 
               <a
                 className={classNames(
-                  `lg:text-2xl text-3xl text-[#FF9C34] font-secondary`,
+                  `lg:text-2xl text-3xl text-rose-gold font-secondary`,
 
                   `normal-case`
                 )}
@@ -62,12 +63,12 @@ const Header = () => {
               </a>
             </div>
 
-            <div className="navbar-center hidden lg:flex text-white">
+            <div className="navbar-center hidden lg:flex text-primary">
               {headerNavLinks.map((navItem: HeaderNavLinks) => (
                 <div
-                  className="hover:text-secondary active:text-secondary
+                  className="hover:text-outline active:text-outline
 
-                             focus:text-secondary"
+                             focus:text-outline"
                   key={navItem.title}
                 >
                   <a

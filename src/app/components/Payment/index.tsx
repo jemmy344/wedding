@@ -1,18 +1,38 @@
+<<<<<<< HEAD
 import style from "./style.module.css";
 export interface IPaymentProps {}
+=======
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
+import { siteMetadata } from "@/data/siteMetadata";
+import Link from "next/link";
+import { useState } from "react";
+import Modal from "./Modal";
+import "./css/style.css";
+>>>>>>> 47541ba0a33726956e4e8af909fece49f43bd7eb
 
-export default function Payment(props: IPaymentProps) {
+export default function Payment() {
+  const [showAccountModal, setShowAccountModal] = useState(false);
   return (
-    <div className="flex justify-center items-center w-full">
+    <div id="gift" className="flex justify-center items-center w-full">
+      {showAccountModal && <Modal onClose={setShowAccountModal} />}
       <div className="w-[78%]">
+<<<<<<< HEAD
         <div className={`${style.card}`}>
           <p className={`${style.heading}`}>Gifts</p>
           <p className={`${style.para}`}>
+=======
+        <div className="card ">
+          <img src="/images/gift.gif" height={"100px"} width={"100px"} />
+          <p className="heading font-primary text-rose-gold">Gifts</p>
+          <p className="para">
+>>>>>>> 47541ba0a33726956e4e8af909fece49f43bd7eb
             We have most things we need for life and love. if you want to bless
             us with a gift, we can always use cash gifts as we move to our new
             place. we will appreciate your prayers and well wishes as we start
             this journey together.
           </p>
+<<<<<<< HEAD
           <div className={`${style.overlay}`}></div>
           <div className="flex w-[20%] justify-center items-center gap-7">
             <button className={`btn  ${style["card-btn"]}`}>
@@ -74,6 +94,25 @@ export default function Payment(props: IPaymentProps) {
                   />
                 </g>
               </svg>
+=======
+          <div className="overlay"></div>
+          <div className="flex w-[20%] justify-center items-center gap-7 z-[0]">
+            {siteMetadata.couplesDetails.paymentLinks.map((links) => (
+              <Link
+                passHref={true}
+                href={links.link}
+                key={links.link}
+                className="btn  card-btn"
+              >
+                <links.providerLogo></links.providerLogo>
+              </Link>
+            ))}
+            <button
+              onClick={() => setShowAccountModal(true)}
+              className="btn  card-btn"
+            >
+              <p className="text-base">Account</p>
+>>>>>>> 47541ba0a33726956e4e8af909fece49f43bd7eb
             </button>
           </div>
         </div>
