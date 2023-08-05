@@ -3,7 +3,7 @@ import { MouseEventHandler, Suspense, useState } from "react";
 import useMeasure from "react-use-measure";
 import { Shapes } from "./Shapes";
 import { transition } from "./settings";
-import "./style.css";
+import style from "./style.module.css";
 
 interface IButton3dProps {
   text: string;
@@ -25,7 +25,7 @@ export default function Button3d({ text, onCLickEvt }: IButton3dProps) {
     <MotionConfig transition={transition}>
       <motion.button
         ref={ref}
-        className="button3d w-40 h-11"
+        className={`${style.button3d} w-40 h-11`}
         initial={false}
         animate={isHover ? "hover" : "rest"}
         whileTap="press"
@@ -52,15 +52,15 @@ export default function Button3d({ text, onCLickEvt }: IButton3dProps) {
         }}
       >
         <motion.div
-          className="shapes"
+          className={`${style.shapes}`}
           variants={{
             rest: { opacity: 0 },
             hover: { opacity: 1 },
           }}
         >
-          <div className="pink blush bg-[#f2056f]" />
-          <div className="blue blush bg-[#db07d1]" />
-          <div className="container">
+          <div className={`${style.pink} ${style.blush} bg-[#f2056f]`} />
+          <div className={`${style.pink} ${style.blush}bg-[#db07d1]`} />
+          <div className={`${style.container}`}>
             <Suspense fallback={null}>
               <Shapes
                 isHover={isHover}
@@ -73,7 +73,7 @@ export default function Button3d({ text, onCLickEvt }: IButton3dProps) {
         </motion.div>
         <motion.div
           variants={{ hover: { scale: 0.85 }, press: { scale: 1.1 } }}
-          className="label"
+          className={`${style.label}`}
         >
           {text}
         </motion.div>

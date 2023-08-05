@@ -4,7 +4,6 @@ import { MotionConfig, MotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { Camera, mouseToLightRotation, spring } from "./Camera";
 import { transition } from "./settings";
-import "./style.css";
 import { useSmoothTransform } from "./use-smooth-transform";
 interface ShapesProps {
   isHover: boolean;

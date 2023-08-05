@@ -1,21 +1,21 @@
-import "./style.css";
+import style from "./style.module.css";
 export interface IPaymentProps {}
 
 export default function Payment(props: IPaymentProps) {
   return (
     <div className="flex justify-center items-center w-full">
       <div className="w-[78%]">
-        <div className="card ">
-          <p className="heading">Gifts</p>
-          <p className="para">
+        <div className={`${style.card}`}>
+          <p className={`${style.heading}`}>Gifts</p>
+          <p className={`${style.para}`}>
             We have most things we need for life and love. if you want to bless
             us with a gift, we can always use cash gifts as we move to our new
             place. we will appreciate your prayers and well wishes as we start
             this journey together.
           </p>
-          <div className="overlay"></div>
+          <div className={`${style.overlay}`}></div>
           <div className="flex w-[20%] justify-center items-center gap-7">
-            <button className="btn  card-btn">
+            <button className={`btn  ${style["card-btn"]}`}>
               <svg
                 data-name="Layer 1"
                 viewBox="0 0 841.89 595.28"
@@ -28,7 +28,7 @@ export default function Payment(props: IPaymentProps) {
                 {/* <circle cx="753.45" cy="337.8" r="16.47" fill="#41276d" /> */}
               </svg>
             </button>
-            <button className="btn  card-btn">
+            <button className={`btn  ${style["card-btn"]}`}>
               <svg
                 className="w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"

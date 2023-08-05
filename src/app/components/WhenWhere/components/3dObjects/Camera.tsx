@@ -2,7 +2,6 @@ import { PerspectiveCameraProps, useThree } from "@react-three/fiber";
 import { MotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useLayoutEffect, useRef } from "react";
-import "./style.css";
 import { useSmoothTransform } from "./use-smooth-transform";
 interface CameraProps {
   mouseX: MotionValue<number>;
