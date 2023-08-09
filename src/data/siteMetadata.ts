@@ -108,7 +108,8 @@ const couplesDetails: CouplesDetails = {
     accountName: "Aremu Priscilla",
     accountNumber: "2114504919",
     bankName: "UBA",
-    bankLogo: ""
+    bankLogo: "",
+    sortCode:""
   },
 {
   accountName: "Aremu Priscilla",
