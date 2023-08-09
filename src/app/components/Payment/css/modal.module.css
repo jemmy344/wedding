@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: fixed;
 }
 
 .closeButton {
@@ -35,11 +36,12 @@
   position: relative;
   max-width: 90%;
   width: 40%;
-  height: 40%;
+  height: 60%;
   max-height: 90%;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
+  overflow-y: scroll;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   pointer-events: auto;
 }
