@@ -31,8 +31,9 @@ interface CouplesDetails {
     accountName: string;
     accountNumber: string;
     bankName: string;
-    bankLogo: React.FC;
-  },
+    bankLogo: string;
+    sortCode?: string;
+  }[],
   thankYouMessage: string;
   whenWhereContent: string;
 }
@@ -103,12 +104,19 @@ const couplesDetails: CouplesDetails = {
    forward to creating many more cherished memories with you in the future.
    #PSAM'23
   `,
-  accountDetails: {
+  accountDetails: [{
     accountName: "Aremu Priscilla",
     accountNumber: "2114504919",
     bankName: "UBA",
-    bankLogo: KudaSvg
-  }
+    bankLogo: ""
+  },
+{
+  accountName: "Aremu Priscilla",
+  accountNumber: "49667568",
+  bankName: "Lloyds Bank",
+  bankLogo: "",
+  sortCode: "772212"
+}]
 };
 
 interface SiteMetadata {

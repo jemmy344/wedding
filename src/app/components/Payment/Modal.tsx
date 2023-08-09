@@ -11,6 +11,15 @@ const Modal = ({ onClose }: IGoogleMapProps) => {
       <div className={styles.modalContent}>
         <ModalHeader onClose={() => onClose(false)} />
         <div className="flex flex-col justify-center items-center gap-5 font-bold text-lg ">
+          {
+            siteMetadata.couplesDetails.accountDetails.map(acctDetails => {
+              return (
+                <div>
+                  
+                </div>
+              )
+            })
+          }
           <div className="capitalize">
             <siteMetadata.couplesDetails.accountDetails.bankLogo />
           </div>
