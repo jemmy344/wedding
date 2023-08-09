@@ -15,6 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>PSAM</title>
+      </head>
       <body
         className={`${inter.className} bg-gradient-conic bg-primary h-full scrollbar-thin scrollbar-thumb-rose-gold scrollbar-thumb-rounded-md scrollbar-track-rounded-md scroll-m-1 scrollbar-track-white`}
       >
