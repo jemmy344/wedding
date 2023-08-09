@@ -104,9 +104,9 @@ const couplesDetails: CouplesDetails = {
    #PSAM'23
   `,
   accountDetails: {
-    accountName: "Account Name Placeholder",
-    accountNumber: "35446578634",
-    bankName: "PlaceHolder Bank",
+    accountName: "Aremu Priscilla",
+    accountNumber: "2114504919",
+    bankName: "UBA",
     bankLogo: KudaSvg
   }
 };
