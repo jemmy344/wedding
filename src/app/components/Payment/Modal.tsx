@@ -15,21 +15,20 @@ const Modal = ({ onClose }: IGoogleMapProps) => {
             siteMetadata.couplesDetails.accountDetails.map(acctDetails => {
               return (
                 <div>
-                  
+              
+          <label>{acctDetails.bankName}</label>
+          <label className="capitalize">
+            {acctDetails.accountName}
+          </label>
+          <label className="capitalize">
+            {acctDetails.accountNumber}
+          </label>
+           <label>Sort Code: {acctDetails.sortCode}</label>
                 </div>
               )
             })
           }
-          <div className="capitalize">
-            <siteMetadata.couplesDetails.accountDetails.bankLogo />
-          </div>
-          <label>{siteMetadata.couplesDetails.accountDetails.bankName}</label>
-          <label className="capitalize">
-            {siteMetadata.couplesDetails.accountDetails.accountName}
-          </label>
-          <label className="capitalize">
-            {siteMetadata.couplesDetails.accountDetails.accountNumber}
-          </label>
+          
         </div>
       </div>
     </div>,
