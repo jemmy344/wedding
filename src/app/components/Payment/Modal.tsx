@@ -27,7 +27,9 @@ const Modal = ({ onClose }: IGoogleMapProps) => {
                 <p className="uppercase">{acctDetails.accountNumber}</p>
               </div>
               <div className="text-gray-500">
-                <p>Sort Code: {acctDetails.sortCode}</p>
+                {acctDetails.sortCode && (
+                  <p>Sort Code: {acctDetails.sortCode}</p>
+                )}
               </div>
             </div>
           ))}

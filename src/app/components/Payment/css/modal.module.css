@@ -31,7 +31,7 @@
   align-items: center;
 }
 
-/* Modal Content */
+/* Default styles */
 .modalContent {
   position: relative;
   max-width: 90%;
@@ -45,4 +45,20 @@
   overflow-y: scroll;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   pointer-events: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .modalContent {
+    word-wrap: break-word;
+    height: 40%; /* Adjust the height as needed */
+  }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+  .modalContent {
+    word-wrap: break-word;
+    height: 50%; /* Adjust the height as needed */
+  }
 }
