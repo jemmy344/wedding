@@ -46,11 +46,11 @@ export const photos: ImageProps[] = [
         width: 800,
         height: 599
     },
-    {
-        src: "/images/pic10.jpeg",
-        width: 800,
-        height: 599
-    },
+    // {
+    //     src: "/images/pic10.jpeg",
+    //     width: 800,
+    //     height: 599
+    // },
     {
         src: "/images/pic11.jpeg",
         width: 800,
@@ -61,9 +61,9 @@ export const photos: ImageProps[] = [
         width: 800,
         height: 599
     },
-    {
-        src: "/images/pic13.jpeg",
-        width: 800,
-        height: 599
-    }
+    // {
+    //     src: "/images/pic13.jpeg",
+    //     width: 800,
+    //     height: 599
+    // }
 ];

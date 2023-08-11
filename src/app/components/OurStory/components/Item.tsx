@@ -4,6 +4,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import style from "../css/style.module.css";
+import ExpandableText from "./ExpandableText";
 interface ItemProps {
   imageUrl: string;
   title: string;
@@ -41,9 +42,9 @@ const Item: React.FC<ItemProps> = ({
         >
           <h1 className="font-primary text-rose-gold">{title}</h1>
           <br />
-          <p className="text-chocolate-brown p-5 font-mono backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30">
-            {content}
-          </p>
+          <div className="text-chocolate-brown flex flex-col justify-center items-center w-full p-5 font-mono backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30">
+            <ExpandableText maxLength={100} textContent={content} />
+          </div>
         </div>
       </div>
       {isActive && (
