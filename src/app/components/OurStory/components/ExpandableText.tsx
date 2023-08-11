@@ -15,7 +15,7 @@ const calculateFontSize = (screenWidth: number): string => {
   } else if (screenWidth >= device.medium) {
     return "1.8rem"; // Medium screens
   } else {
-    return "1.6rem"; // Small screens
+    return "1rem"; // Small screens
   }
 };
 
@@ -35,7 +35,7 @@ const calculateContainerHeight = (
       break;
 
     case screenWidth >= device.small:
-      containerHeight = expanded ? "700px" : "450px";
+      containerHeight = expanded ? "450px" : "400px";
       break;
 
     default:
