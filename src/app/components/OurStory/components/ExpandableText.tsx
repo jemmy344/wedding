@@ -11,11 +11,11 @@ const calculateFontSize = (screenWidth: number): string => {
   // Your font size calculation algorithm here
   // Adjust the formula and breakpoints as needed
   if (screenWidth >= device.large) {
-    return "1.45rem"; // Large screens
+    return "2.1rem"; // Large screens
   } else if (screenWidth >= device.medium) {
-    return "1.1rem"; // Medium screens
+    return "1.8rem"; // Medium screens
   } else {
-    return "1rem"; // Small screens
+    return "1.6rem"; // Small screens
   }
 };
 
@@ -23,15 +23,27 @@ const calculateContainerHeight = (
   screenWidth: number,
   expanded: boolean
 ): string => {
-  // Your container height calculation algorithm here
-  // Adjust the formula and breakpoints as needed
-  if (expanded && screenWidth >= device.large) {
-    return "auto"; // Expanded on large screens
-  } else if (expanded) {
-    return "500px"; // Expanded on small/medium screens
-  } else {
-    return "300px"; // Unexpanded height
+  let containerHeight: string;
+
+  switch (true) {
+    case screenWidth >= device.large:
+      containerHeight = expanded ? "auto" : "auto";
+      break;
+
+    case screenWidth >= device.medium:
+      containerHeight = expanded ? "300px" : "200px";
+      break;
+
+    case screenWidth >= device.small:
+      containerHeight = expanded ? "700px" : "450px";
+      break;
+
+    default:
+      containerHeight = "";
+      break;
   }
+
+  return containerHeight;
 };
 
 const ExpandableText: React.FC<ExpandableTextProps> = ({
@@ -70,13 +82,11 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({
   useEffect(() => {
     const string = `text-chocolate-brown p-5 font-mono backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30 ${
       isLargeScreen
-        ? `text-[120px] leading-[40px] overflow-y-hidden ${
-            expanded ? "h-auto" : "h-auto"
-          }`
+        ? ` leading-[40px] overflow-y-hidden`
         : isMediumScreen
-        ? `text-4xl overflow-hidden ${expanded ? "h-auto" : "h-auto"}`
+        ? ` overflow-hidden`
         : isSmallScreen
-        ? "text-sm"
+        ? `overflow-y-scroll`
         : "text-base"
     }`;
     setClassString(string);
@@ -84,7 +94,8 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({
   useEffect(() => {
     setFontSize(calculateFontSize(window.innerWidth));
     setContainerHeight(calculateContainerHeight(window.innerWidth, expanded));
-  }, [expanded]);
+    console.log({ containerHeight });
+  }, [containerHeight, expanded, isLargeScreen, isMediumScreen, isSmallScreen]);
   useEffect(() => {
     setRenderText(
       expanded
@@ -100,11 +111,11 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({
       <p
         ref={textContainerRef}
         className={classString}
-        style={{ fontSize, height: containerHeight }}
+        style={{ fontSize, maxHeight: containerHeight }}
       >
         {renderText}
       </p>
-      {textContent.length > maxLength && !isLargeScreen && (
+      {textContent.length > maxLength && !isLargeScreen && !isMediumScreen && (
         <p
           onClick={toggleExpand}
           className="absolute hover:ring-black bottom-2 cursor-pointer underline right-2 text-sm text-gray-500 hover:text-gray-700"

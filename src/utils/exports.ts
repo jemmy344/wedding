@@ -1,7 +1,7 @@
 // device-breakpoints.js
 const device = {
-    small: 640,
-    medium: 1800,
+    small: 200,
+    medium: 900,
     large: 1900,
 };
 

@@ -42,7 +42,7 @@ const Item: React.FC<ItemProps> = ({
         >
           <h1 className="font-primary text-rose-gold">{title}</h1>
           <br />
-          <div className="text-chocolate-brown flex flex-col justify-center items-center w-full p-5 font-mono backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30">
+          <div className="text-chocolate-brown p-5 font-mono backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30">
             <ExpandableText maxLength={100} textContent={content} />
           </div>
         </div>
