@@ -14,7 +14,7 @@ const Modal = ({ onClose }: IGoogleMapProps) => {
           {siteMetadata.couplesDetails.accountDetails.map((acctDetails) => (
             <div
               key={acctDetails.accountNumber}
-              className="bg-gradient-to-r w-[60%] from-blue-300 to-purple-400 rounded-lg shadow-xl p-8 mb-8"
+              className="bg-gradient-to-r w-[60%] from-blue-300 to-purple-400 rounded-lg shadow-xl p-2 p-sm-8 mb-8"
             >
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold">{acctDetails.bankName}</h2>
