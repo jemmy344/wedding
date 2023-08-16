@@ -142,10 +142,8 @@ const CircleSvg = () => {
                   )}
                 </text>
               </g>
-            </motion.svg>
-          </div>
-
-          <div className={`${style["countdown-wrapper"]}`}>
+              <foreignObject x="75" y="125" width="150" height="150" style={{overflow: "visible"}}>
+              <div className="relative">
             {hasDateElapsedValue ? (
               <div
                 className={`${style["spinning-smiley is-inview"]}`}
@@ -176,11 +174,16 @@ const CircleSvg = () => {
                 </svg>
               </div>
             ) : (
-              <div className={`${style["countdown-col-element"]}`}>
+              <div>
                 <CountdownComponent />
               </div>
             )}
           </div>
+              </foreignObject>
+            </motion.svg>
+          </div>
+
+          
         </div>
       </Parallax>
     </div>

@@ -34,6 +34,19 @@
   }
 }
 
+@media (max-width: 380px) {
+  .countdown-wrapper .countdown-col-element {
+    left: 100px;
+    margin-left: -50px;
+  }
+  .countdown-wrapper .countdown-col-element-text {
+    font-family: Pacifico;
+    font-size: 5px;
+    margin: 5px 0 0 3px;
+    text-transform: uppercase;
+  }
+}
+
 .countdown-wrapper .countdown-col-element .days:first-of-type {
   font-size: 47px;
   letter-spacing: -1px;
