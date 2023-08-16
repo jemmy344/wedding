@@ -80,11 +80,12 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({
   };
 
   useEffect(() => {
-    const string = `text-chocolate-brown p-5 font-mono backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30 ${
+    const string = `text-chocolate-brown p-5 font-mono scrollbar-thin scrollbar-thumb-rose-gold scrollbar-thumb-rounded-md scrollbar-track-rounded-md scroll-m-1 scrollbar-track-white
+    backdrop-opacity-20 rounded-lg backdrop-invert bg-white/30 ${
       isLargeScreen
-        ? ` leading-[40px] overflow-y-hidden`
+        ? ` leading-[40px] overflow-y-scroll`
         : isMediumScreen
-        ? ` overflow-hidden`
+        ? ` overflow-y-scroll`
         : isSmallScreen
         ? `overflow-y-scroll`
         : "text-base"
@@ -115,7 +116,7 @@ const ExpandableText: React.FC<ExpandableTextProps> = ({
       >
         {renderText}
       </p>
-      {textContent.length > maxLength && !isLargeScreen && !isMediumScreen && (
+      {textContent.length > maxLength && (
         <p
           onClick={toggleExpand}
           className="absolute hover:ring-black bottom-2 cursor-pointer underline right-2 text-sm text-gray-500 hover:text-gray-700"

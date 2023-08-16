@@ -1,7 +1,7 @@
 import { siteMetadata } from "@/data/siteMetadata";
 import { daysUntil, getEndOfDayTime } from "@/utils/utils"; // Assuming you have a utility function for getting the end of the day time
 import React, { useEffect, useMemo, useRef, useState } from "react";
-
+import styles from './style.module.css';
 const CountdownComponent: React.FC = () => {
   const memoizedWeddingDate = useMemo(
     () => new Date(siteMetadata.couplesDetails.weddingDate),
@@ -45,8 +45,9 @@ const CountdownComponent: React.FC = () => {
   }, [counter]);
 
   return (
-    <div className="text-center">
-      <span className="countdown font-marhey text-6xl text-center">
+
+<div className="flex flex-col justify-center items-center text-rose-gold">
+      <span className="countdown font-marhey text-6xl ">
         <span
           ref={counterElementRef}
           style={{
@@ -54,8 +55,9 @@ const CountdownComponent: React.FC = () => {
           }}
         ></span>
       </span>
-      <p className="text-center font-primary -mt-4">Days</p>
+      <p className="font-primary -mt-4">Days</p>
     </div>
+    
   );
 };
 export default CountdownComponent;

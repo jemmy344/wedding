@@ -42,8 +42,8 @@ const Header = () => {
                     p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   {headerNavLinks.map((navItem: HeaderNavLinks) => (
-                    <li key={navItem.title}>
-                       <Link to={navItem.href}>{navItem.title}</Link>
+                    <li key={navItem.title} className="cursor-pointer">
+                       <a href={navItem.href}>{navItem.title}</a>
                     </li>
                   ))}
                 </ul>

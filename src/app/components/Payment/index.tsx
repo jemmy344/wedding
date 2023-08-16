@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Modal from "./Modal";
 import style from "./style.module.css";
+import { AccountSVG } from "./KudaSvg";
 
 export default function Payment() {
   const [showAccountModal, setShowAccountModal] = useState(false);
@@ -39,7 +40,7 @@ export default function Payment() {
               onClick={() => setShowAccountModal(true)}
               className={`btn  ${style["card-btn"]}`}
             >
-              <p className="text-base">Account</p>
+              <AccountSVG/>
             </button>
           </div>
         </div>
