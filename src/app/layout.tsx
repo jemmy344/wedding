@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('G-GMBL7R7HC6'); 
 
 const inter = Inter({ subsets: ["latin"] });
 
