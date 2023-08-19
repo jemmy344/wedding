@@ -174,9 +174,9 @@ const CircleSvg = () => {
                 </svg>
               </div>
             ) : ( */}
-              <div>
+              {/* <div>
                 <CountdownComponent />
-              </div>
+              </div> */}
             {/* )} */}
           </div>
               </foreignObject>
